@@ -40,6 +40,10 @@ namespace WindowsFormsApp2
             this.Mul_button = new System.Windows.Forms.Button();
             this.Div_button = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.Sin_button = new System.Windows.Forms.Button();
+            this.Cos_button = new System.Windows.Forms.Button();
+            this.Sqrt_button = new System.Windows.Forms.Button();
+            this.Sqr_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // FirstNumber
@@ -49,7 +53,6 @@ namespace WindowsFormsApp2
             this.FirstNumber.Size = new System.Drawing.Size(125, 20);
             this.FirstNumber.TabIndex = 0;
             this.FirstNumber.Click += new System.EventHandler(this.FirstNumber_Click);
-            this.FirstNumber.TextChanged += new System.EventHandler(this.FirstNumber_TextChanged);
             // 
             // SecondNumber
             // 
@@ -65,9 +68,9 @@ namespace WindowsFormsApp2
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(32, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 13);
+            this.label1.Size = new System.Drawing.Size(106, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Первое число";
+            this.label1.Text = "Первый операнд";
             // 
             // label2
             // 
@@ -75,13 +78,13 @@ namespace WindowsFormsApp2
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(306, 38);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 13);
+            this.label2.Size = new System.Drawing.Size(102, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Второе число";
+            this.label2.Text = "Второй операнд";
             // 
             // Result
             // 
-            this.Result.Location = new System.Drawing.Point(178, 172);
+            this.Result.Location = new System.Drawing.Point(178, 212);
             this.Result.Name = "Result";
             this.Result.Size = new System.Drawing.Size(141, 20);
             this.Result.TabIndex = 4;
@@ -90,7 +93,7 @@ namespace WindowsFormsApp2
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(194, 136);
+            this.label3.Location = new System.Drawing.Point(194, 176);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(112, 24);
             this.label3.TabIndex = 5;
@@ -138,7 +141,7 @@ namespace WindowsFormsApp2
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(198, 201);
+            this.button1.Location = new System.Drawing.Point(198, 241);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 23);
             this.button1.TabIndex = 10;
@@ -146,12 +149,56 @@ namespace WindowsFormsApp2
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button_clear);
             // 
+            // Sin_button
+            // 
+            this.Sin_button.Location = new System.Drawing.Point(35, 108);
+            this.Sin_button.Name = "Sin_button";
+            this.Sin_button.Size = new System.Drawing.Size(34, 23);
+            this.Sin_button.TabIndex = 11;
+            this.Sin_button.Text = "Sin";
+            this.Sin_button.UseVisualStyleBackColor = true;
+            this.Sin_button.Click += new System.EventHandler(this.Sin_button_Click);
+            // 
+            // Cos_button
+            // 
+            this.Cos_button.Location = new System.Drawing.Point(104, 108);
+            this.Cos_button.Name = "Cos_button";
+            this.Cos_button.Size = new System.Drawing.Size(34, 23);
+            this.Cos_button.TabIndex = 12;
+            this.Cos_button.Text = "Cos";
+            this.Cos_button.UseVisualStyleBackColor = true;
+            this.Cos_button.Click += new System.EventHandler(this.Cos_button_Click);
+            // 
+            // Sqrt_button
+            // 
+            this.Sqrt_button.Location = new System.Drawing.Point(35, 139);
+            this.Sqrt_button.Name = "Sqrt_button";
+            this.Sqrt_button.Size = new System.Drawing.Size(54, 23);
+            this.Sqrt_button.TabIndex = 13;
+            this.Sqrt_button.Text = "Корень";
+            this.Sqrt_button.UseVisualStyleBackColor = true;
+            this.Sqrt_button.Click += new System.EventHandler(this.Sqrt_button_Click);
+            // 
+            // Sqr_button
+            // 
+            this.Sqr_button.Location = new System.Drawing.Point(104, 139);
+            this.Sqr_button.Name = "Sqr_button";
+            this.Sqr_button.Size = new System.Drawing.Size(65, 23);
+            this.Sqr_button.TabIndex = 14;
+            this.Sqr_button.Text = "Степень";
+            this.Sqr_button.UseVisualStyleBackColor = true;
+            this.Sqr_button.Click += new System.EventHandler(this.Sqr_button_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(471, 249);
+            this.ClientSize = new System.Drawing.Size(471, 292);
+            this.Controls.Add(this.Sqr_button);
+            this.Controls.Add(this.Sqrt_button);
+            this.Controls.Add(this.Cos_button);
+            this.Controls.Add(this.Sin_button);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Div_button);
             this.Controls.Add(this.Mul_button);
@@ -190,6 +237,10 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Button Mul_button;
         private System.Windows.Forms.Button Div_button;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Sin_button;
+        private System.Windows.Forms.Button Cos_button;
+        private System.Windows.Forms.Button Sqrt_button;
+        private System.Windows.Forms.Button Sqr_button;
     }
 }
 
