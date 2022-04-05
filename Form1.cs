@@ -173,5 +173,15 @@ namespace WindowsFormsApp2
         {
             Result_Function(9);
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Result_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

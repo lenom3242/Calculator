@@ -51,7 +51,7 @@ namespace WindowsFormsApp2
             // 
             // FirstNumber
             // 
-            this.FirstNumber.Location = new System.Drawing.Point(22, 70);
+            this.FirstNumber.Location = new System.Drawing.Point(16, 41);
             this.FirstNumber.Name = "FirstNumber";
             this.FirstNumber.Size = new System.Drawing.Size(138, 20);
             this.FirstNumber.TabIndex = 0;
@@ -59,7 +59,7 @@ namespace WindowsFormsApp2
             // 
             // SecondNumber
             // 
-            this.SecondNumber.Location = new System.Drawing.Point(309, 70);
+            this.SecondNumber.Location = new System.Drawing.Point(16, 115);
             this.SecondNumber.Name = "SecondNumber";
             this.SecondNumber.Size = new System.Drawing.Size(145, 20);
             this.SecondNumber.TabIndex = 1;
@@ -69,7 +69,7 @@ namespace WindowsFormsApp2
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(18, 38);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(151, 20);
             this.label1.TabIndex = 2;
@@ -79,7 +79,7 @@ namespace WindowsFormsApp2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(306, 38);
+            this.label2.Location = new System.Drawing.Point(13, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(148, 20);
             this.label2.TabIndex = 3;
@@ -87,25 +87,29 @@ namespace WindowsFormsApp2
             // 
             // Result
             // 
-            this.Result.Location = new System.Drawing.Point(178, 212);
+            this.Result.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Result.Location = new System.Drawing.Point(13, 300);
+            this.Result.Multiline = true;
             this.Result.Name = "Result";
-            this.Result.Size = new System.Drawing.Size(141, 20);
+            this.Result.Size = new System.Drawing.Size(141, 29);
             this.Result.TabIndex = 4;
+            this.Result.TextChanged += new System.EventHandler(this.Result_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(194, 176);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(33, 273);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 24);
+            this.label3.Size = new System.Drawing.Size(98, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Результат";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // Plus_button
             // 
             this.Plus_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Plus_button.Location = new System.Drawing.Point(198, 48);
+            this.Plus_button.Location = new System.Drawing.Point(17, 154);
             this.Plus_button.Name = "Plus_button";
             this.Plus_button.Size = new System.Drawing.Size(34, 35);
             this.Plus_button.TabIndex = 6;
@@ -116,7 +120,7 @@ namespace WindowsFormsApp2
             // Minus_button
             // 
             this.Minus_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Minus_button.Location = new System.Drawing.Point(250, 48);
+            this.Minus_button.Location = new System.Drawing.Point(57, 154);
             this.Minus_button.Name = "Minus_button";
             this.Minus_button.Size = new System.Drawing.Size(34, 35);
             this.Minus_button.TabIndex = 7;
@@ -127,7 +131,7 @@ namespace WindowsFormsApp2
             // Mul_button
             // 
             this.Mul_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Mul_button.Location = new System.Drawing.Point(198, 89);
+            this.Mul_button.Location = new System.Drawing.Point(17, 195);
             this.Mul_button.Name = "Mul_button";
             this.Mul_button.Size = new System.Drawing.Size(34, 35);
             this.Mul_button.TabIndex = 8;
@@ -138,7 +142,7 @@ namespace WindowsFormsApp2
             // Div_button
             // 
             this.Div_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Div_button.Location = new System.Drawing.Point(250, 89);
+            this.Div_button.Location = new System.Drawing.Point(57, 195);
             this.Div_button.Name = "Div_button";
             this.Div_button.Size = new System.Drawing.Size(34, 35);
             this.Div_button.TabIndex = 9;
@@ -149,7 +153,7 @@ namespace WindowsFormsApp2
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(198, 238);
+            this.button1.Location = new System.Drawing.Point(34, 335);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(108, 30);
             this.button1.TabIndex = 10;
@@ -161,21 +165,21 @@ namespace WindowsFormsApp2
             // Sin_button
             // 
             this.Sin_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Sin_button.Location = new System.Drawing.Point(35, 101);
+            this.Sin_button.Location = new System.Drawing.Point(97, 154);
             this.Sin_button.Name = "Sin_button";
-            this.Sin_button.Size = new System.Drawing.Size(44, 32);
+            this.Sin_button.Size = new System.Drawing.Size(34, 35);
             this.Sin_button.TabIndex = 11;
             this.Sin_button.Text = "Sin";
-            this.toolTip1.SetToolTip(this.Sin_button, "Выисление синуса первого операнда");
+            this.toolTip1.SetToolTip(this.Sin_button, "Вычисление синуса первого операнда");
             this.Sin_button.UseVisualStyleBackColor = true;
             this.Sin_button.Click += new System.EventHandler(this.Sin_button_Click);
             // 
             // Cos_button
             // 
-            this.Cos_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Cos_button.Location = new System.Drawing.Point(84, 101);
+            this.Cos_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Cos_button.Location = new System.Drawing.Point(97, 195);
             this.Cos_button.Name = "Cos_button";
-            this.Cos_button.Size = new System.Drawing.Size(44, 32);
+            this.Cos_button.Size = new System.Drawing.Size(34, 34);
             this.Cos_button.TabIndex = 12;
             this.Cos_button.Text = "Cos";
             this.toolTip1.SetToolTip(this.Cos_button, "Вычисление косинуса первого операнда");
@@ -184,22 +188,22 @@ namespace WindowsFormsApp2
             // 
             // Sqrt_button
             // 
-            this.Sqrt_button.Location = new System.Drawing.Point(35, 139);
+            this.Sqrt_button.Location = new System.Drawing.Point(137, 196);
             this.Sqrt_button.Name = "Sqrt_button";
-            this.Sqrt_button.Size = new System.Drawing.Size(54, 34);
+            this.Sqrt_button.Size = new System.Drawing.Size(35, 34);
             this.Sqrt_button.TabIndex = 13;
-            this.Sqrt_button.Text = "Корень";
+            this.Sqrt_button.Text = "✓";
             this.toolTip1.SetToolTip(this.Sqrt_button, "Вычисление квадратного корня первого операнда");
             this.Sqrt_button.UseVisualStyleBackColor = true;
             this.Sqrt_button.Click += new System.EventHandler(this.Sqrt_button_Click);
             // 
             // Sqr_button
             // 
-            this.Sqr_button.Location = new System.Drawing.Point(104, 139);
+            this.Sqr_button.Location = new System.Drawing.Point(17, 236);
             this.Sqr_button.Name = "Sqr_button";
-            this.Sqr_button.Size = new System.Drawing.Size(65, 34);
+            this.Sqr_button.Size = new System.Drawing.Size(35, 34);
             this.Sqr_button.TabIndex = 14;
-            this.Sqr_button.Text = "Степень";
+            this.Sqr_button.Text = "A^B";
             this.toolTip1.SetToolTip(this.Sqr_button, "Возведение в степень первого операнда показателем степени второго операнда");
             this.Sqr_button.UseVisualStyleBackColor = true;
             this.Sqr_button.Click += new System.EventHandler(this.Sqr_button_Click);
@@ -207,9 +211,9 @@ namespace WindowsFormsApp2
             // Percent_button
             // 
             this.Percent_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Percent_button.Location = new System.Drawing.Point(134, 101);
+            this.Percent_button.Location = new System.Drawing.Point(137, 154);
             this.Percent_button.Name = "Percent_button";
-            this.Percent_button.Size = new System.Drawing.Size(35, 32);
+            this.Percent_button.Size = new System.Drawing.Size(35, 35);
             this.Percent_button.TabIndex = 15;
             this.Percent_button.Text = "%";
             this.toolTip1.SetToolTip(this.Percent_button, "Вычисление доли первого операнда от второго");
@@ -221,7 +225,7 @@ namespace WindowsFormsApp2
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(471, 292);
+            this.ClientSize = new System.Drawing.Size(185, 385);
             this.Controls.Add(this.Percent_button);
             this.Controls.Add(this.Sqr_button);
             this.Controls.Add(this.Sqrt_button);
