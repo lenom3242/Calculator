@@ -23,8 +23,6 @@ namespace WindowsFormsApp2
         private void Form1_Load(object sender, EventArgs e)
         {
            
-            //FirstNumber.Text = "123...";
-            //SecondNumber.Text = "456...";
         }
 
 
@@ -36,6 +34,7 @@ namespace WindowsFormsApp2
                 string second_n_t = SecondNumber.Text;
 
                 double first_n = Convert.ToDouble(first_n_t);
+               if (second_n_t == "") { second_n_t = "0"; }
                 double second_n = Convert.ToDouble(second_n_t);
                 switch (choice)
                 {
@@ -84,12 +83,22 @@ namespace WindowsFormsApp2
                             Result.Text = Convert.ToString(Math.Pow(first_n, second_n));
                             break;
                         }
+                    case 9:
+                        {
+                            Result.Text = Convert.ToString((first_n / second_n) * 100) + "%";
+                            break;
+                        }
                 };
             }
             catch (FormatException) {
                 MessageBox.Show("В полях должны быть цифры", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            };
-            
+            } 
+            catch (OverflowException)
+            {
+                MessageBox.Show("Слишком большое число", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
+
         }
         private void Plus_button_Click(object sender, EventArgs e)
         {
@@ -139,19 +148,17 @@ namespace WindowsFormsApp2
 
         private void Sin_button_Click(object sender, EventArgs e)
         {
-            SecondNumber.Text = "0";
             Result_Function(5);
         }
 
         private void Cos_button_Click(object sender, EventArgs e)
         {
-            SecondNumber.Text = "0";
             Result_Function(6);
         }
 
         private void Sqrt_button_Click(object sender, EventArgs e)
         {
-            SecondNumber.Text = "0";
+            //SecondNumber.Text = "0";
             Result_Function(7);
         }
 
@@ -160,9 +167,11 @@ namespace WindowsFormsApp2
             Result_Function(8);
         }
 
-        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
-        {
 
+
+        private void Percent_button_Click(object sender, EventArgs e)
+        {
+            Result_Function(9);
         }
     }
 }

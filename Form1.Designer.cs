@@ -29,6 +29,7 @@ namespace WindowsFormsApp2
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.FirstNumber = new System.Windows.Forms.TextBox();
             this.SecondNumber = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,6 +45,8 @@ namespace WindowsFormsApp2
             this.Cos_button = new System.Windows.Forms.Button();
             this.Sqrt_button = new System.Windows.Forms.Button();
             this.Sqr_button = new System.Windows.Forms.Button();
+            this.Percent_button = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // FirstNumber
@@ -146,6 +149,7 @@ namespace WindowsFormsApp2
             this.button1.Size = new System.Drawing.Size(93, 23);
             this.button1.TabIndex = 10;
             this.button1.Text = "Очистить";
+            this.toolTip1.SetToolTip(this.button1, "Очистить поля ввода");
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button_clear);
             // 
@@ -156,16 +160,18 @@ namespace WindowsFormsApp2
             this.Sin_button.Size = new System.Drawing.Size(34, 23);
             this.Sin_button.TabIndex = 11;
             this.Sin_button.Text = "Sin";
+            this.toolTip1.SetToolTip(this.Sin_button, "Выисление синуса первого операнда");
             this.Sin_button.UseVisualStyleBackColor = true;
             this.Sin_button.Click += new System.EventHandler(this.Sin_button_Click);
             // 
             // Cos_button
             // 
-            this.Cos_button.Location = new System.Drawing.Point(104, 108);
+            this.Cos_button.Location = new System.Drawing.Point(85, 108);
             this.Cos_button.Name = "Cos_button";
             this.Cos_button.Size = new System.Drawing.Size(34, 23);
             this.Cos_button.TabIndex = 12;
             this.Cos_button.Text = "Cos";
+            this.toolTip1.SetToolTip(this.Cos_button, "Вычисление косинуса первого операнда");
             this.Cos_button.UseVisualStyleBackColor = true;
             this.Cos_button.Click += new System.EventHandler(this.Cos_button_Click);
             // 
@@ -176,6 +182,7 @@ namespace WindowsFormsApp2
             this.Sqrt_button.Size = new System.Drawing.Size(54, 23);
             this.Sqrt_button.TabIndex = 13;
             this.Sqrt_button.Text = "Корень";
+            this.toolTip1.SetToolTip(this.Sqrt_button, "Вычисление квадратного корня первого операнда");
             this.Sqrt_button.UseVisualStyleBackColor = true;
             this.Sqrt_button.Click += new System.EventHandler(this.Sqrt_button_Click);
             // 
@@ -186,8 +193,20 @@ namespace WindowsFormsApp2
             this.Sqr_button.Size = new System.Drawing.Size(65, 23);
             this.Sqr_button.TabIndex = 14;
             this.Sqr_button.Text = "Степень";
+            this.toolTip1.SetToolTip(this.Sqr_button, "Возведение в степень первого операнда показателем степени второго операнда");
             this.Sqr_button.UseVisualStyleBackColor = true;
             this.Sqr_button.Click += new System.EventHandler(this.Sqr_button_Click);
+            // 
+            // Percent_button
+            // 
+            this.Percent_button.Location = new System.Drawing.Point(135, 110);
+            this.Percent_button.Name = "Percent_button";
+            this.Percent_button.Size = new System.Drawing.Size(34, 23);
+            this.Percent_button.TabIndex = 15;
+            this.Percent_button.Text = "%";
+            this.toolTip1.SetToolTip(this.Percent_button, "Вычисление доли первого операнда от второго");
+            this.Percent_button.UseVisualStyleBackColor = true;
+            this.Percent_button.Click += new System.EventHandler(this.Percent_button_Click);
             // 
             // Form1
             // 
@@ -195,6 +214,7 @@ namespace WindowsFormsApp2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(471, 292);
+            this.Controls.Add(this.Percent_button);
             this.Controls.Add(this.Sqr_button);
             this.Controls.Add(this.Sqrt_button);
             this.Controls.Add(this.Cos_button);
@@ -241,6 +261,8 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Button Cos_button;
         private System.Windows.Forms.Button Sqrt_button;
         private System.Windows.Forms.Button Sqr_button;
+        private System.Windows.Forms.Button Percent_button;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
