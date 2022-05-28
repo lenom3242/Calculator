@@ -63,32 +63,7 @@ namespace WindowsFormsApp2
                             Result.Text = Convert.ToString(first_n / second_n);
                             break;
                         }
-                    case 5:
-                        {
-                            Result.Text = Convert.ToString(Math.Sin(first_n));
-                            break;
-                        }
-                    case 6:
-                        {
-                            Result.Text = Convert.ToString(Math.Cos(first_n));
-                            break;
-                        }
-                    case 7:
-                        {
-                            Result.Text = Convert.ToString(Math.Sqrt(first_n));
-                            break;
-                        }
-                    case 8:
-                        {
-                            Result.Text = Convert.ToString(Math.Pow(first_n, second_n));
-                            break;
-                        }
-                    case 9:
-                        {
-                            Result.Text = Convert.ToString((first_n / second_n) * 100) + "%";
-                            break;
-                        }
-                };
+                  };
             }
             catch (FormatException) {
                 MessageBox.Show("В полях должны быть цифры", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -146,27 +121,6 @@ namespace WindowsFormsApp2
             }
         }
 
-        private void Sin_button_Click(object sender, EventArgs e)
-        {
-            Result_Function(5);
-        }
-
-        private void Cos_button_Click(object sender, EventArgs e)
-        {
-            Result_Function(6);
-        }
-
-        private void Sqrt_button_Click(object sender, EventArgs e)
-        {
-            //SecondNumber.Text = "0";
-            Result_Function(7);
-        }
-
-        private void Sqr_button_Click(object sender, EventArgs e)
-        {
-            Result_Function(8);
-        }
-
 
 
         private void Percent_button_Click(object sender, EventArgs e)
@@ -175,11 +129,6 @@ namespace WindowsFormsApp2
         }
 
         private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Result_TextChanged(object sender, EventArgs e)
         {
 
         }
